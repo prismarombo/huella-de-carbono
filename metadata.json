@@ -1,0 +1,5 @@
+{
+  "name": "Bus Fleet Carbon Footprint Simulator",
+  "description": "An interactive simulator to calculate and visualize the total CO₂ emissions of a bus fleet based on its composition of electric and conventional buses. Users can adjust the number of buses of different types to see the immediate impact on the total carbon footprint.",
+  "requestFramePermissions": []
+}
