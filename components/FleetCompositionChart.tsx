@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, Cell } from 'recharts';
 import { BusData } from '../types';
@@ -28,6 +27,7 @@ const FleetCompositionChart: React.FC<FleetCompositionChartProps> = ({ fleetData
             stroke="#9ca3af" 
             width={150} 
             tick={{ fontSize: 12 }}
+            interval={0}
           />
           <Tooltip 
             cursor={{ fill: 'rgba(107, 114, 128, 0.2)' }}
@@ -38,7 +38,7 @@ const FleetCompositionChart: React.FC<FleetCompositionChartProps> = ({ fleetData
             }}
             formatter={(value: number) => [formatter.format(value), "Buses"]}
           />
-          <Bar dataKey="count" name="Cantidad" barSize={20}>
+          <Bar dataKey="count" name="Cantidad" barSize={20} animationDuration={800}>
             {chartData.map((entry, index) => (
               <Cell key={`cell-${index}`} fill={entry.color} />
             ))}

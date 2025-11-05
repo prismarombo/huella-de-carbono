@@ -1,4 +1,3 @@
-
 export interface BusData {
   id: string;
   name: string;
